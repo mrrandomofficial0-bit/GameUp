@@ -103,7 +103,7 @@ NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
 Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/gameup.git
+git clone https://github.com/mrrandomofficial0-bit/GameUp.git
 ```
 
 Install dependencies:
