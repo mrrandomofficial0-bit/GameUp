@@ -1,65 +1,96 @@
-import Image from "next/image";
+import Navbar from "@/app/component/navbar/page";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <main className="min-h-screen bg-[#F9F7F7]">
+      <Navbar />
+
+      <section className="mx-auto max-w-6xl px-6 py-24">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold text-[#112D4E]">
+            GameUp
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-slate-600">
+            Are you up for a game?
+            Create a lobby, invite your friends, and
+            play fun social games together.
           </p>
+
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <button className="rounded-xl bg-[#3F72AF] px-8 py-4 font-semibold text-white transition hover:opacity-90">
+              Create Lobby
+            </button>
+
+            <button className="rounded-xl border border-[#3F72AF] px-8 py-4 font-semibold text-[#3F72AF] transition hover:bg-[#DBE2EF]">
+              Browse Games
+            </button>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+
+        <div className="mx-auto mt-20 max-w-lg rounded-3xl bg-white p-8 shadow-lg">
+          <h2 className="mb-4 text-center text-2xl font-bold text-[#112D4E]">
+            Join Lobby
+          </h2>
+
+          <div className="flex gap-3">
+            <input
+              placeholder="Enter Code"
+              className="flex-1 rounded-xl border p-4 uppercase outline-none focus:border-[#3F72AF] text-[#112D4E] "
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+            <button className="rounded-xl bg-[#3F72AF] px-6 text-white">
+              Join
+            </button>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 pb-24">
+        <h2 className="mb-10 text-center text-4xl font-bold text-[#112D4E]">
+          Featured Games
+        </h2>
+
+        <div className="grid gap-6 md:grid-cols-3">
+          <div className="rounded-3xl bg-white p-6 shadow-md">
+            <div className="text-4xl">🎥</div>
+
+            <h3 className="mt-4 text-xl font-bold">
+              Wrong Clip
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Everyone watches a video.
+              One player gets a different clip.
+              Find the imposter.
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-white p-6 shadow-md">
+            <div className="text-4xl">😂</div>
+
+            <h3 className="mt-4 text-xl font-bold">
+              Meme Detective
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Guess the hidden meme and fool your friends.
+            </p>
+          </div>
+
+          <div className="rounded-3xl bg-white p-6 shadow-md">
+            <div className="text-4xl">🎵</div>
+
+            <h3 className="mt-4 text-xl font-bold">
+              Song Faker
+            </h3>
+
+            <p className="mt-2 text-slate-600">
+              Spot who got the different song.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
