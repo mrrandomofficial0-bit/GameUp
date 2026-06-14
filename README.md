@@ -1,36 +1,180 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎮 GameUp
 
-## Getting Started
+**GameUp** is a multiplayer social gaming platform where friends can create lobbies, join with a code, and play fun party games together.
 
-First, run the development server:
+The goal of GameUp is to make online game nights easy. Create a room, invite your friends, choose a game, and start playing.
+
+---
+
+## 🚀 Features
+
+### 👥 Lobby System
+
+* Create private lobbies
+* Join with a room code
+* Invite friends instantly
+* Host-controlled game selection
+
+### 🎮 Multiple Games
+
+GameUp supports multiple party games inside a single platform.
+
+Current planned games:
+
+* 🎥 Wrong Clip
+* 😂 Meme Detective
+* 🎵 Song Faker
+* 🧠 Trivia Battle
+* 🎬 Movie Mix-Up
+
+More games are planned for future updates.
+
+---
+
+## 🎥 Wrong Clip
+
+Wrong Clip is the first game being developed.
+
+### How It Works
+
+1. Players join a lobby.
+2. Everyone watches a video.
+3. One player receives a different but similar video.
+4. Each player submits a clue word.
+5. Players discuss the clues.
+6. Everyone votes on who they think received the different video.
+7. The imposter wins if they survive the vote.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+* Next.js 15
+* React
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* Supabase
+* PostgreSQL
+* Supabase Authentication
+* Supabase Realtime
+
+### Hosting
+
+* Vercel
+
+---
+
+## 📂 Project Structure
+
+```text
+app/
+├── auth/
+├── games/
+├── lobby/
+├── profile/
+├── component/
+├── utils/
+│   └── supabase/
+│       ├── client.ts
+│       └── server.ts
+└── page.tsx
+```
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=YOUR_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=YOUR_SUPABASE_PUBLISHABLE_KEY
+```
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/yourusername/gameup.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🗺️ Roadmap
 
-To learn more about Next.js, take a look at the following resources:
+### Phase 1
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* User authentication
+* Lobby creation
+* Join lobby system
+* Wrong Clip MVP
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Phase 2
 
-## Deploy on Vercel
+* Additional games
+* Player profiles
+* Friends system
+* Match history
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Phase 3
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Rankings
+* Achievements
+* XP & Levels
+* Custom game modes
+
+### Phase 4
+
+* Mobile optimization
+* Voice chat
+* Creator tools
+* Public lobbies
+
+---
+
+## 🤝 Contributing
+
+Contributions, ideas, and feedback are welcome.
+
+If you'd like to contribute:
+
+1. Fork the project
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
+
+---
+
+Built with ❤️ for game nights and friend groups.
